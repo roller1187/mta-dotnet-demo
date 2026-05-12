@@ -1,0 +1,100 @@
+apiVersion: v1
+kind: List
+items:
+  # Deployment
+  - apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: modern-webapp
+      labels:
+        app: modern-webapp
+        app.kubernetes.io/name: modern-webapp
+        app.kubernetes.io/part-of: customer-portal
+    spec:
+      replicas: 2
+      selector:
+        matchLabels:
+          app: modern-webapp
+      template:
+        metadata:
+          labels:
+            app: modern-webapp
+        spec:
+          containers:
+            - name: modern-webapp
+              image: image-registry.openshift-image-registry.svc:5000/your-namespace/modern-webapp:latest
+              ports:
+                - containerPort: 8080
+                  protocol: TCP
+              env:
+                - name: ASPNETCORE_ENVIRONMENT
+                  value: "Production"
+                - name: AppSettings__AppName
+                  value: "Modern Customer Portal (OpenShift)"
+                - name: AppSettings__MaxCustomers
+                  value: "1000"
+                - name: AppSettings__EnableCaching
+                  value: "true"
+              resources:
+                limits:
+                  cpu: 500m
+                  memory: 512Mi
+                requests:
+                  cpu: 250m
+                  memory: 256Mi
+              livenessProbe:
+                httpGet:
+                  path: /
+                  port: 8080
+                initialDelaySeconds: 30
+                periodSeconds: 10
+              readinessProbe:
+                httpGet:
+                  path: /
+                  port: 8080
+                initialDelaySeconds: 5
+                periodSeconds: 5
+              securityContext:
+                allowPrivilegeEscalation: false
+                runAsNonRoot: true
+                capabilities:
+                  drop:
+                    - ALL
+                seccompProfile:
+                  type: RuntimeDefault
+
+  # Service
+  - apiVersion: v1
+    kind: Service
+    metadata:
+      name: modern-webapp
+      labels:
+        app: modern-webapp
+    spec:
+      ports:
+        - name: http
+          port: 8080
+          targetPort: 8080
+          protocol: TCP
+      selector:
+        app: modern-webapp
+      type: ClusterIP
+
+  # Route
+  - apiVersion: route.openshift.io/v1
+    kind: Route
+    metadata:
+      name: modern-webapp
+      labels:
+        app: modern-webapp
+    spec:
+      to:
+        kind: Service
+        name: modern-webapp
+        weight: 100
+      port:
+        targetPort: http
+      tls:
+        termination: edge
+        insecureEdgeTerminationPolicy: Redirect
+      wildcardPolicy: None

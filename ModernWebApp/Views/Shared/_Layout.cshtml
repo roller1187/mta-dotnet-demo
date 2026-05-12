@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Modern Web Application</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f4f4f4; }
+        .container { max-width: 1200px; margin: 0 auto; background-color: white; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        header { background-color: #0066cc; color: white; padding: 15px; margin: -20px -20px 20px -20px; }
+        nav { margin: 10px 0; }
+        nav a { color: white; margin-right: 15px; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; color: #666; font-size: 0.9em; }
+        .badge { display: inline-block; padding: 4px 8px; background-color: #28a745; color: white; border-radius: 3px; font-size: 0.85em; margin-left: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>@ViewBag.AppName <span class="badge">.NET 8</span></h1>
+            <nav>
+                <a asp-controller="Home" asp-action="Index">Home</a>
+                <a asp-controller="Customer" asp-action="List">Customers</a>
+            </nav>
+        </header>
+
+        <main role="main">
+            @RenderBody()
+        </main>
+
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Modern Web Application (ASP.NET Core 8.0 on Linux)</p>
+        </footer>
+    </div>
+</body>
+</html>
