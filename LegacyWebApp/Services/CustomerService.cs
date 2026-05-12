@@ -73,7 +73,7 @@ namespace LegacyWebApp.Services
         {
             if (_customers.Count >= _maxCustomers)
             {
-                throw new InvalidOperationException($"Cannot exceed maximum of {_maxCustomers} customers");
+                throw new InvalidOperationException(string.Format("Cannot exceed maximum of {0} customers", _maxCustomers));
             }
 
             customer.Id = _customers.Any() ? _customers.Max(c => c.Id) + 1 : 1;
