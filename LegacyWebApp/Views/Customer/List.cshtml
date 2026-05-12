@@ -1,0 +1,58 @@
+@model List<LegacyWebApp.Models.Customer>
+@{
+    ViewBag.Title = "Customer List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customer List</h2>
+
+@if (ViewBag.Error != null)
+{
+    <div style="background-color: #f8d7da; color: #721c24; padding: 12px; border: 1px solid #f5c6cb; border-radius: 4px; margin: 10px 0;">
+        @ViewBag.Error
+    </div>
+}
+
+@if (Model != null && Model.Count > 0)
+{
+    <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+        <thead>
+            <tr style="background-color: #f2f2f2;">
+                <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd;">ID</th>
+                <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd;">Name</th>
+                <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd;">Email</th>
+                <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd;">Phone</th>
+                <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd;">Account Type</th>
+                <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd;">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in Model)
+            {
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">@customer.Id</td>
+                    <td style="padding: 12px;">@customer.Name</td>
+                    <td style="padding: 12px;">@customer.Email</td>
+                    <td style="padding: 12px;">@customer.Phone</td>
+                    <td style="padding: 12px;">@customer.AccountType</td>
+                    <td style="padding: 12px;">
+                        @if (customer.IsActive)
+                        {
+                            <span style="color: green; font-weight: bold;">Active</span>
+                        }
+                        else
+                        {
+                            <span style="color: red;">Inactive</span>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <p style="color: #666;">Total Customers: @Model.Count</p>
+}
+else
+{
+    <p style="padding: 20px; background-color: #f9f9f9; border-left: 4px solid #ccc;">No customers found.</p>
+}

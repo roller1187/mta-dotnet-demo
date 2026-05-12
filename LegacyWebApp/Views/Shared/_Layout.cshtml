@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Legacy Web Application</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f4f4f4; }
+        .container { max-width: 1200px; margin: 0 auto; background-color: white; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        header { background-color: #333; color: white; padding: 15px; margin: -20px -20px 20px -20px; }
+        nav { margin: 10px 0; }
+        nav a { color: white; margin-right: 15px; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; color: #666; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>@ViewBag.AppName</h1>
+            <nav>
+                @Html.ActionLink("Home", "Index", "Home")
+                @Html.ActionLink("Customers", "List", "Customer")
+            </nav>
+        </header>
+
+        <main>
+            @RenderBody()
+        </main>
+
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Legacy Web Application (ASP.NET Framework 4.8)</p>
+        </footer>
+    </div>
+</body>
+</html>

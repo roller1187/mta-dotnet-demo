@@ -1,0 +1,31 @@
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Welcome to @ViewBag.AppName</h2>
+
+<div style="margin: 20px 0; padding: 15px; background-color: #e7f3ff; border-left: 4px solid #2196F3;">
+    <h3>Application Information</h3>
+    <p><strong>Server Time:</strong> @ViewBag.ServerTime</p>
+    <p><strong>Server Path:</strong> @ViewBag.ServerPath</p>
+    <p><strong>Session Started:</strong> @Session["StartTime"]</p>
+</div>
+
+<div style="margin: 20px 0; padding: 15px; background-color: #fff3cd; border-left: 4px solid #ffc107;">
+    <h3>Migration Challenges</h3>
+    <p>This application demonstrates common .NET Framework patterns that need migration:</p>
+    <ul>
+        <li><strong>System.Web dependencies</strong> - HttpContext, Server, Session</li>
+        <li><strong>Web.config</strong> - Configuration system needs migration to appsettings.json</li>
+        <li><strong>Global.asax</strong> - Application lifecycle events</li>
+        <li><strong>Old NuGet packages</strong> - Newtonsoft.Json 11.0.1, MVC 5.2.7</li>
+        <li><strong>Traditional .csproj</strong> - Needs conversion to SDK-style</li>
+    </ul>
+</div>
+
+<div style="margin: 20px 0;">
+    <a href="@Url.Action("List", "Customer")" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 4px;">
+        View Customers
+    </a>
+</div>
