@@ -163,8 +163,8 @@ EXTERNAL_MANIFEST_URL=$(oc get vmexport dotnet-legacy-vm-export -n dotnet-legacy
 
 curl --cacert cacert.crt -H "x-kubevirt-export-token: $(cat token.txt)" -H "Accept: application/yaml" $EXTERNAL_MANIFEST_URL -o vm-disk.qcow2
 ```
-
-(Replace `<EXTERNAL_MANIFEST_URL>` with the specific volume URL provided in the `status.links` output).
+> [!NOTE]
+> The variable `$EXTERNAL_MANIFEST_URL` contains the specific volume URL provided in the `status.links` output from step 3).
 
 ## Clean Up:
 It is not necessary to wait for the TTL used in the export manifest to expire. You can manually delete the export object to clean up the token secrets and routes:
