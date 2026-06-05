@@ -95,7 +95,7 @@ oc create -f imported-vm.yaml
 ## Step 4: Start the VM
 Once the VM is created, you can boot it up using `virtctl`:
 ```
-virtctl start my-imported-vm -n my-namespace
+virtctl start my-imported-vm -n dotnet-legacy
 ```
 
 
@@ -154,12 +154,14 @@ oc get vmexport dotnet-legacy-vm-export -n dotnet-legacy -o jsonpath={.status.li
 
 2. **Decode the secret token:**
 ```
-oc get secret export-token-dotnet-legacy-vm-export -n my-namespace -o jsonpath={.data.token} | base64 --decode > token.txt
+oc get secret export-token-dotnet-legacy-vm-export -n dotnet-legacy -o jsonpath={.data.token} | base64 --decode > token.txt
 ```
 
-3. **Download the image:**
+3. **Capture the External Manifest URL and Download the image:**
 ```
-curl --cacert cacert.crt -H "x-kubevirt-export-token: $(cat token.txt)" -H "Accept: application/yaml" <EXTERNAL_MANIFEST_URL> -o vm-disk.qcow2
+EXTERNAL_MANIFEST_URL=$(oc get vmexport dotnet-legacy-vm-export -n dotnet-legacy -o jsonpath='{.status.links.external.manifests[0].url}')
+
+curl --cacert cacert.crt -H "x-kubevirt-export-token: $(cat token.txt)" -H "Accept: application/yaml" $EXTERNAL_MANIFEST_URL -o vm-disk.qcow2
 ```
 
 (Replace `<EXTERNAL_MANIFEST_URL>` with the specific volume URL provided in the `status.links` output).
@@ -167,5 +169,5 @@ curl --cacert cacert.crt -H "x-kubevirt-export-token: $(cat token.txt)" -H "Acce
 ## Clean Up:
 It is not necessary to wait for the TTL used in the export manifest to expire. You can manually delete the export object to clean up the token secrets and routes:
 ```
-oc delete vmexport my-vm-export -n my-namespace
+oc delete vmexport my-vm-export -n dotnet-legacy
 ```

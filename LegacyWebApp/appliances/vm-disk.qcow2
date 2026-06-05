@@ -1,0 +1,384 @@
+apiVersion: v1
+data:
+  ca.pem: |-
+    -----BEGIN CERTIFICATE-----
+    MIIDMjCCAhqgAwIBAgIIYCiPE8j46TIwDQYJKoZIhvcNAQELBQAwNzESMBAGA1UE
+    CxMJb3BlbnNoaWZ0MSEwHwYDVQQDExhrdWJlLWFwaXNlcnZlci1sYi1zaWduZXIw
+    HhcNMjYwMzE3MTc1OTI3WhcNMzYwMzE0MTc1OTI3WjA3MRIwEAYDVQQLEwlvcGVu
+    c2hpZnQxITAfBgNVBAMTGGt1YmUtYXBpc2VydmVyLWxiLXNpZ25lcjCCASIwDQYJ
+    KoZIhvcNAQEBBQADggEPADCCAQoCggEBALaZPs90XBQT1hhwPXptWS/WfawFprkp
+    1zWQF+nhihv7VxL5CJpwHD4YU8sbVPMeeE/AZAcX5Yaw53A9PHkDW8dRB85GFuVz
+    5Iq/GR43brOLeXVCba/GfYpCZg2Bf37hPgmSiEA/7J5kdZvkyHvUkEZMaCynYjDi
+    lKaNviIGDPbcgDeoWR/Zp5/hWMWq8KhRMyDowL2+LLhwq81a0ONe8MqGLzRw/HQc
+    n59e/Gt2N/PRwZn6uDj7q+zEYMseSnIojIrOKnu7BWYw0BDtBSKJ7CruU057Hvpr
+    0xH4Pq5KF1rWhhYSPid7vB5HSc+MOS2QQo8FQQPaOS8dqwHDEn8HSLsCAwEAAaNC
+    MEAwDgYDVR0PAQH/BAQDAgKkMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFCrW
+    Vl8+BXcWkkc6UKEBTijaePh1MA0GCSqGSIb3DQEBCwUAA4IBAQBWxrvpWvgLlFSx
+    1dpOT5WXHXlll6rkorONRTqot1wDjCuf0nCK+mmFcnU7thjHHryMFXzKXFUxe1bJ
+    3QR24pf2qGTw9IDDB8xfTk5W/trL4e4P/M1Kc8w3l5Ea1MjehpGjJPxha2R8uv+o
+    W5A+2oLNY6onzmZ09EXrRzXOqeCXXqUPEw8kyKJWgkwZ3NzCQSIKfG7d9tupXLHz
+    bT/BTX7hY4ol7bOJ47PMI+vve/Fkp6MNHXFN8/YyRKw/DUFGnPB0C+MiySFVB4C7
+    2w/crrvYcXqA/PwV3YO7SIuxhwzUQ4ehOS22DezUgZ7mB9Ddw97QAX+eqP+jKg0q
+    9mJOEUQm
+    -----END CERTIFICATE-----
+    -----BEGIN CERTIFICATE-----
+    MIIDQDCCAiigAwIBAgIIbnk3kOfw/A8wDQYJKoZIhvcNAQELBQAwPjESMBAGA1UE
+    CxMJb3BlbnNoaWZ0MSgwJgYDVQQDEx9rdWJlLWFwaXNlcnZlci1sb2NhbGhvc3Qt
+    c2lnbmVyMB4XDTI2MDMxNzE3NTkyNloXDTM2MDMxNDE3NTkyNlowPjESMBAGA1UE
+    CxMJb3BlbnNoaWZ0MSgwJgYDVQQDEx9rdWJlLWFwaXNlcnZlci1sb2NhbGhvc3Qt
+    c2lnbmVyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA+yFKG/8jGMqW
+    57IZqWcXn8PAitmPleIqkD5v14JxJAGTxQtOH3XOXiHcL8rTIxCee5uclvQp5SLa
+    zXg8hFSPl/mWUo+2Ar0x2ygV/XVxCDx+9fXei9fvLnWpUXaYEVsMX3BQ966bpmD2
+    SC98hbDapD6BqMjkruO0v9avAJ5o5+sBZOsN05N9dkpUxE8fbAzdvWUQzK6LP4SC
+    EZ+JwfYbzyZuD52m1r5P/6bVP+leGlp9shuj/6NvYGvZgakYL/zhHZP5c/6JfYhS
+    4GyySTKka4fUWjUqVNzeeIMFIS5ywc1SZen0zc1uqToViI/0n/FRrbWifsIkyKDZ
+    Ll2zYjsBkQIDAQABo0IwQDAOBgNVHQ8BAf8EBAMCAqQwDwYDVR0TAQH/BAUwAwEB
+    /zAdBgNVHQ4EFgQUfNc4VBfFBugDjHxmwl1/t/oq3dMwDQYJKoZIhvcNAQELBQAD
+    ggEBADMCOAghw3fvu9sguRWuNPOHKq9aKD/3cRqFQtP0P0ztE15hoVqrAIo2iBnq
+    XzPt749ojkYcSE+q620TirBqHoGNMx+h3DzM5rZdhsHTW4uSB0onoiW6nZ4komX4
+    Gm3JleMcVPoPbcwNesl7v8fqSPUfRS3CB3QXn3t46HmIFWQguoOk0mGoaAgQoKcd
+    r9sodlYAeSahv4FuM/dIoT62n4GaShOC5VejfajjhfQInqnVP7XaqTk45rvD9w6R
+    N5rNrfOW6YGOwV/KOM35Bu3OFiJf7RyB9GISE8xNPSVf4Ut8O/eSBHpBznLfsSt5
+    xMVs+Y32G4IZ2RnIz2uTicNs9/8=
+    -----END CERTIFICATE-----
+    -----BEGIN CERTIFICATE-----
+    MIIDTDCCAjSgAwIBAgIIHTCq2TMJnicwDQYJKoZIhvcNAQELBQAwRDESMBAGA1UE
+    CxMJb3BlbnNoaWZ0MS4wLAYDVQQDEyVrdWJlLWFwaXNlcnZlci1zZXJ2aWNlLW5l
+    dHdvcmstc2lnbmVyMB4XDTI2MDMxNzE3NTkyN1oXDTM2MDMxNDE3NTkyN1owRDES
+    MBAGA1UECxMJb3BlbnNoaWZ0MS4wLAYDVQQDEyVrdWJlLWFwaXNlcnZlci1zZXJ2
+    aWNlLW5ldHdvcmstc2lnbmVyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+    AQEA10ehTncFveGrMXp6fs14ndlUAaZyFiLPunq2L2stBXFgioPIZFVcS6glpaDi
+    O9qkZQC/LsydSOBD9WSAbDwXfD2+Vd9nxkhmrsMtcYwS/XDOEwBF2fBy7tZR/re8
+    Jv2PFYZ1D/Ky3a8s5c7gRc5xQ3Iv8E6H404mhhq3i4gLxtO3FqiEofp7d8K/Q0Cy
+    58Wbyq4e9QaqQYqNjIRzK4AsctWhjI4WxqdT9EUBxWf6sL0rqX3ozl+dVt/phYpA
+    M2L+1HStDGXxURXkSsUOG3Dr8aFejZHcyB145ARoK2RIzHNCVSlTVJwHoM7aJopy
+    4FV2mce6X2Mve53V6MMKOHv5oQIDAQABo0IwQDAOBgNVHQ8BAf8EBAMCAqQwDwYD
+    VR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUsnGWYvdoKby7CPO9fk4h00y14t0wDQYJ
+    KoZIhvcNAQELBQADggEBAFosBdaeA5B/UFTJdSBc+xSzlBbJvSB46Y6VwINNIjOX
+    Zwjh70piDfmAgCFU9bP4HopxmekKakkY4FhgGBT4WdFX5G41iHxldNuJfgKjMFGH
+    K0Nhx4dwpUhziw5GG+kZ0fJzlszhIEG2gt2jVDjhJAFkEI3EXfkpBZgaHHSSO2tC
+    n7eVVuAJgnuuWKBA3pf+hf2ql3M0SZgoNkaZmRSKJ628lAq3oa9+sIFJ4cq47o+o
+    cZu0uxImkv+6X+4lKRw/Lqk/tCQNSXDkXe3tevL8i58Z6zlrNK91emYsqYb6BJN4
+    KGoFON3sAr6NmkejKiBZIsUX7tzNvcX6xfpvxpnpfcs=
+    -----END CERTIFICATE-----
+    -----BEGIN CERTIFICATE-----
+    MIIDlzCCAn+gAwIBAgIISJyX1pb6Kk0wDQYJKoZIhvcNAQELBQAwWTFXMFUGA1UE
+    AwxOb3BlbnNoaWZ0LWt1YmUtYXBpc2VydmVyLW9wZXJhdG9yX2xvY2FsaG9zdC1y
+    ZWNvdmVyeS1zZXJ2aW5nLXNpZ25lckAxNzczNzcxNDE3MB4XDTI2MDMxNzE4MTY1
+    NloXDTM2MDMxNDE4MTY1N1owWTFXMFUGA1UEAwxOb3BlbnNoaWZ0LWt1YmUtYXBp
+    c2VydmVyLW9wZXJhdG9yX2xvY2FsaG9zdC1yZWNvdmVyeS1zZXJ2aW5nLXNpZ25l
+    ckAxNzczNzcxNDE3MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzZGl
+    NIuBTD4e2I7W2OicGShBAGA3EkIS/CvE44HtQH/YnQtIA3dujGHASRqoVKNYM4WV
+    Ojsu4InN/NWHdSF2ryk+Z5jCCBcmnezlRJWOVa7ID1EgTVWAT+SPQ2UOv4TqiJ/0
+    O2k+US0WCxCVMb4VymEBEBKMcppg+9QjJKa3yj8rUhWRhOgGbSGxcOrLR83vlguH
+    UBYRFjptperGJt3hhbnmAMOkDTxlkCtMToQM7wNN5xEfhWH3aJWY4xoZB/wceYYE
+    xiNPdBFPnjOMSBv33cGaa10P57JDAtLnijdB5EIylpiNDf2I3F2XyM0RNPwmZFDQ
+    cy3a91w2BGk1WFpoEQIDAQABo2MwYTAOBgNVHQ8BAf8EBAMCAqQwDwYDVR0TAQH/
+    BAUwAwEB/zAdBgNVHQ4EFgQUe4h6tBnnwH0OLa8j3de2KE9X844wHwYDVR0jBBgw
+    FoAUe4h6tBnnwH0OLa8j3de2KE9X844wDQYJKoZIhvcNAQELBQADggEBABkG9n3r
+    Qy6gtCw52GwzgCHqJQGkXaGWHOy+MLh4g+ALMyhSAKe+sj2BRxCwKhfla5aI6lNs
+    /5Lx2TevAwxAwSZlR4OzVfHlTUPDjVPFtSCu78LLPY0baKyWCCUgHyQKl8pfQaUA
+    cOo+2ruhuru3aR/iaLE8dcdb256aqXWGMWi34dvH9TLFgOGWuXNBHThgar5KUv9f
+    2gGkgvAyUK620Dzqe/RxB+XtnMhDgYywIpk6xfb87Q+1V1Tu2sa6hkjxEL3JaLuv
+    M8af5dSFiDhEytO2MIbmPgGksNF8oSElOni1Gx06BTLGjj6pZWfzLYjsvqdvK1qy
+    XAwYCLBPL8CkBjA=
+    -----END CERTIFICATE-----
+    -----BEGIN CERTIFICATE-----
+    MIIGrjCCBJagAwIBAgIRAOJpip/qIvzNCX6/RSm6cagwDQYJKoZIhvcNAQEMBQAw
+    SzELMAkGA1UEBhMCQVQxEDAOBgNVBAoTB1plcm9TU0wxKjAoBgNVBAMTIVplcm9T
+    U0wgUlNBIERvbWFpbiBTZWN1cmUgU2l0ZSBDQTAeFw0yNjAzMjYwMDAwMDBaFw0y
+    NjA2MjQyMzU5NTlaMCwxKjAoBgNVBAMTIWFwaS5hcm9tZXJvdC5yZWRoYXQtb3Bl
+    bnNoaWZ0LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOa1aFjx
+    PETrsR59PCfH1D3ljNZyde5RSIWF9m5GxIey/mZdfCr9Gnq/vmygiBn+PCuHRf4Y
+    eVxZI4TH3GkdGIFFeK8sJM7o/CyvLgARBHWdRWB21jr5fAMoI6sAVo8Jhbs4zNib
+    9c8UfdPzM4++4BGaHcvO74F4nBnd1ZSU7MQH2ydddGojK63vBvSzC1qQisYR7eOU
+    PQpRl4OUkcI1o9Dl2AJ4ryLDsoGB85qd60klPNxObJ6bh7b2m26d+XYDpGO8g24X
+    2r6U+g+iQhiXhrIp+CRs6k+PAAzPSXBVWq4H8oHXF4ytQjctw89XkOLlnUBCM/UM
+    hd1UCws43ZwmnPkCAwEAAaOCAqowggKmMB8GA1UdIwQYMBaAFMjZeGii2Rlo1T1y
+    3l8KPty1hoamMB0GA1UdDgQWBBQCD2A54di7IG/+8iCoGbBTCAdUezAOBgNVHQ8B
+    Af8EBAMCBaAwDAYDVR0TAQH/BAIwADATBgNVHSUEDDAKBggrBgEFBQcDATBJBgNV
+    HSAEQjBAMDQGCysGAQQBsjEBAgJOMCUwIwYIKwYBBQUHAgEWF2h0dHBzOi8vc2Vj
+    dGlnby5jb20vQ1BTMAgGBmeBDAECATCBiAYIKwYBBQUHAQEEfDB6MEsGCCsGAQUF
+    BzAChj9odHRwOi8vemVyb3NzbC5jcnQuc2VjdGlnby5jb20vWmVyb1NTTFJTQURv
+    bWFpblNlY3VyZVNpdGVDQS5jcnQwKwYIKwYBBQUHMAGGH2h0dHA6Ly96ZXJvc3Ns
+    Lm9jc3Auc2VjdGlnby5jb20wggEFBgorBgEEAdZ5AgQCBIH2BIHzAPEAdgAOV5S8
+    866pPjMbLJkHs/eQ35vCPXEyJd0hqSWsYcVOIQAAAZ0p4ZvmAAAEAwBHMEUCICOv
+    g5hLOXX7Bebt+zk9EPPKX77I2pa4W7V1DkJ+o+F+AiEAkPthJGwqMolKXVujGPbK
+    +/IPn7d+m2CWsVD2LXsVovwAdwAWgy2r8KklDw/wOqVF/8i/yCPQh0v2BCkn+Ocf
+    MxP1+gAAAZ0p4ZwRAAAEAwBIMEYCIQDkE6z3012whfYl5R9Lq9NTlI3A36uSSgzk
+    ORAH5ETtawIhAIl5MYZvDcGnZJ04xcQUdLe9+eojvjdj+peE+YSEjuVWMFIGA1Ud
+    EQRLMEmCIWFwaS5hcm9tZXJvdC5yZWRoYXQtb3BlbnNoaWZ0LmNvbYIkKi5hcHBz
+    LmFyb21lcm90LnJlZGhhdC1vcGVuc2hpZnQuY29tMA0GCSqGSIb3DQEBDAUAA4IC
+    AQAvbR6LUyVuFVrdZRUjP3lgFaUvEwo6fatzdtWwdBfhE2vxuCKwKvMNozrmmZTf
+    Ku8n0bHQ+FrD/hHOsUw8Qov857EjhhLFl61wzg+aOI3caqISRrGSsyH3JFVBr4vS
+    xJJvf3TqLVRRjpVKSirr8TmE79vowtQ4QI72fedvnDcagVo9wQXZxIlhS8PKZlfC
+    K9tRcPMuK0+SXsIr7w/m286DjKhiPOLhAu5ejOrOZuT/QAPgaUwofoNH3DVbcbFP
+    tjQtdPO4bc/okCtruSBo0yFFcu46oilExyFqQbERrYQdMT2Dk15H3iQBpXN4lSUm
+    wTxs9QQEULrmXHXtOeAy4ki0mKFDEd8meZXVwY44bOs2UEVJf7OkNNAYqaaIAe1B
+    xW9JRpa1EWJvYBf+8FkoL6CUbhlM3MJAdnMz8E0hZBUlc+MTyGq01x/uG8HUrTAx
+    8SHc0JZs5/mbsh4yfHMFJcDOf8JmgMrSAHVEnz4oeyXStaOwRhOLKM8564a5h8ps
+    RAATwFwZd2uoReW72MUD0Tc6JaPM9aLVvq7NqIpCzcniw62cPamxPX1jPceQhMpV
+    EnbnOSKjXrWyV39CCInLr+1dBV0w2ODe6Y0KxyPq3uJGybee8cyDiQvspQOug5L3
+    PMMOYWxQNeBXvcxschPTAS5RPFCLYmGyf5lxEj6UozGRQQ==
+    -----END CERTIFICATE-----
+    -----BEGIN CERTIFICATE-----
+    MIIG1TCCBL2gAwIBAgIQbFWr29AHksedBwzYEZ7WvzANBgkqhkiG9w0BAQwFADCB
+    iDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCk5ldyBKZXJzZXkxFDASBgNVBAcTC0pl
+    cnNleSBDaXR5MR4wHAYDVQQKExVUaGUgVVNFUlRSVVNUIE5ldHdvcmsxLjAsBgNV
+    BAMTJVVTRVJUcnVzdCBSU0EgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMjAw
+    MTMwMDAwMDAwWhcNMzAwMTI5MjM1OTU5WjBLMQswCQYDVQQGEwJBVDEQMA4GA1UE
+    ChMHWmVyb1NTTDEqMCgGA1UEAxMhWmVyb1NTTCBSU0EgRG9tYWluIFNlY3VyZSBT
+    aXRlIENBMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAhmlzfqO1Mdgj
+    4W3dpBPTVBX1AuvcAyG1fl0dUnw/MeueCWzRWTheZ35LVo91kLI3DDVaZKW+TBAs
+    JBjEbYmMwcWSTWYCg5334SF0+ctDAsFxsX+rTDh9kSrG/4mp6OShubLaEIUJiZo4
+    t873TuSd0Wj5DWt3DtpAG8T35l/v+xrN8ub8PSSoX5Vkgw+jWf4KQtNvUFLDq8mF
+    WhUnPL6jHAADXpvs4lTNYwOtx9yQtbpxwSt7QJY1+ICrmRJB6BuKRt/jfDJF9Jsc
+    RQVlHIxQdKAJl7oaVnXgDkqtk2qddd3kCDXd74gv813G91z7CjsGyJ93oJIlNS3U
+    gFbD6V54JMgZ3rSmotYbz98oZxX7MKbtCm1aJ/q+hTv2YK1yMxrnfcieKmOYBbFD
+    hnW5O6RMA703dBK92j6XRN2EttLkQuujZgy+jXRKtaWMIlkNkWJmOiHmErQngHvt
+    iNkIcjJumq1ddFX4iaTI40a6zgvIBtxFeDs2RfcaH73er7ctNUUqgQT5rFgJhMmF
+    x76rQgB5OZUkodb5k2ex7P+Gu4J86bS15094UuYcV09hVeknmTh5Ex9CBKipLS2W
+    2wKBakf+aVYnNCU6S0nASqt2xrZpGC1v7v6DhuepyyJtn3qSV2PoBiU5Sql+aARp
+    wUibQMGm44gjyNDqDlVp+ShLQlUH9x8CAwEAAaOCAXUwggFxMB8GA1UdIwQYMBaA
+    FFN5v1qqK0rPVIDh2JvAnfKyA2bLMB0GA1UdDgQWBBTI2XhootkZaNU9ct5fCj7c
+    tYaGpjAOBgNVHQ8BAf8EBAMCAYYwEgYDVR0TAQH/BAgwBgEB/wIBADAdBgNVHSUE
+    FjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwIgYDVR0gBBswGTANBgsrBgEEAbIxAQIC
+    TjAIBgZngQwBAgEwUAYDVR0fBEkwRzBFoEOgQYY/aHR0cDovL2NybC51c2VydHJ1
+    c3QuY29tL1VTRVJUcnVzdFJTQUNlcnRpZmljYXRpb25BdXRob3JpdHkuY3JsMHYG
+    CCsGAQUFBwEBBGowaDA/BggrBgEFBQcwAoYzaHR0cDovL2NydC51c2VydHJ1c3Qu
+    Y29tL1VTRVJUcnVzdFJTQUFkZFRydXN0Q0EuY3J0MCUGCCsGAQUFBzABhhlodHRw
+    Oi8vb2NzcC51c2VydHJ1c3QuY29tMA0GCSqGSIb3DQEBDAUAA4ICAQAVDwoIzQDV
+    ercT0eYqZjBNJ8VNWwVFlQOtZERqn5iWnEVaLZZdzxlbvz2Fx0ExUNuUEgYkIVM4
+    YocKkCQ7hO5noicoq/DrEYH5IuNcuW1I8JJZ9DLuB1fYvIHlZ2JG46iNbVKA3ygA
+    Ez86RvDQlt2C494qqPVItRjrz9YlJEGT0DrttyApq0YLFDzf+Z1pkMhh7c+7fXeJ
+    qmIhfJpduKc8HEQkYQQShen426S3H0JrIAbKcBCiyYFuOhfyvuwVCFDfFvrjADjd
+    4jX1uQXd161IyFRbm89s2Oj5oU1wDYz5sx+hoCuh6lSs+/uPuWomIq3y1GDFNafW
+    +LsHBU16lQo5Q2yh25laQsKRgyPmMpHJ98edm6y2sHUabASmRHxvGiuwwE25aDU0
+    2SAeepyImJ2CzB80YG7WxlynHqNhpE7xfC7PzQlLgmfEHdU+tHFeQazRQnrFkW2W
+    kqRGIq7cKRnyypvjPMkjeiV9lRdAM9fSJvsB3svUuu1coIG1xxI1yegoGM4r5QP4
+    RGIVvYaiI76C0djoSbQ/dkIUUXQuB8AL5jyH34g3BZaaXyvpmnV4ilppMXVAnAYG
+    ON51WhJ6W0xNdNJwzYASZYH+tmCWI+N60Gv2NNMGHwMZ7e9bXgzUCZH5FaBFDGR5
+    S9VWqHB73Q+OyIVvIbKYcSc2w/aSuFKGSA==
+    -----END CERTIFICATE-----
+    -----BEGIN CERTIFICATE-----
+    MIIFgTCCBGmgAwIBAgIQOXJEOvkit1HX02wQ3TE1lTANBgkqhkiG9w0BAQwFADB7
+    MQswCQYDVQQGEwJHQjEbMBkGA1UECAwSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYD
+    VQQHDAdTYWxmb3JkMRowGAYDVQQKDBFDb21vZG8gQ0EgTGltaXRlZDEhMB8GA1UE
+    AwwYQUFBIENlcnRpZmljYXRlIFNlcnZpY2VzMB4XDTE5MDMxMjAwMDAwMFoXDTI4
+    MTIzMTIzNTk1OVowgYgxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpOZXcgSmVyc2V5
+    MRQwEgYDVQQHEwtKZXJzZXkgQ2l0eTEeMBwGA1UEChMVVGhlIFVTRVJUUlVTVCBO
+    ZXR3b3JrMS4wLAYDVQQDEyVVU0VSVHJ1c3QgUlNBIENlcnRpZmljYXRpb24gQXV0
+    aG9yaXR5MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAgBJlFzYOw9sI
+    s9CsVw127c0n00ytUINh4qogTQktZAnczomfzD2p7PbPwdzx07HWezcoEStH2jnG
+    vDoZtF+mvX2do2NCtnbyqTsrkfjib9DsFiCQCT7i6HTJGLSR1GJk23+jBvGIGGqQ
+    Ijy8/hPwhxR79uQfjtTkUcYRZ0YIUcuGFFQ/vDP+fmyc/xadGL1RjjWmp2bIcmfb
+    IWax1Jt4A8BQOujM8Ny8nkz+rwWWNR9XWrf/zvk9tyy29lTdyOcSOk2uTIq3XJq0
+    tyA9yn8iNK5+O2hmAUTnAU5GU5szYPeUvlM3kHND8zLDU+/bqv50TmnHa4xgk97E
+    xwzf4TKuzJM7UXiVZ4vuPVb+DNBpDxsP8yUmazNt925H+nND5X4OpWaxKXwyhGNV
+    icQNwZNUMBkTrNN9N6frXTpsNVzbQdcS2qlJC9/YgIoJk2KOtWbPJYjNhLixP6Q5
+    D9kCnusSTJV882sFqV4Wg8y4Z+LoE53MW4LTTLPtW//e5XOsIzstAL81VXQJSdhJ
+    WBp/kjbmUZIO8yZ9HE0XvMnsQybQv0FfQKlERPSZ51eHnlAfV1SoPv10Yy+xUGUJ
+    5lhCLkMaTLTwJUdZ+gQek9QmRkpQgbLevni3/GcV4clXhB4PY9bpYrrWX1Uu6lzG
+    KAgEJTm4Diup8kyXHAc/DVL17e8vgg8CAwEAAaOB8jCB7zAfBgNVHSMEGDAWgBSg
+    EQojPpbxB+zirynvgqV/0DCktDAdBgNVHQ4EFgQUU3m/WqorSs9UgOHYm8Cd8rID
+    ZsswDgYDVR0PAQH/BAQDAgGGMA8GA1UdEwEB/wQFMAMBAf8wEQYDVR0gBAowCDAG
+    BgRVHSAAMEMGA1UdHwQ8MDowOKA2oDSGMmh0dHA6Ly9jcmwuY29tb2RvY2EuY29t
+    L0FBQUNlcnRpZmljYXRlU2VydmljZXMuY3JsMDQGCCsGAQUFBwEBBCgwJjAkBggr
+    BgEFBQcwAYYYaHR0cDovL29jc3AuY29tb2RvY2EuY29tMA0GCSqGSIb3DQEBDAUA
+    A4IBAQAYh1HcdCE9nIrgJ7cz0C7M7PDmy14R3iJvm3WOnnL+5Nb+qh+cli3vA0p+
+    rvSNb3I8QzvAP+u431yqqcau8vzY7qN7Q/aGNnwU4M309z/+3ri0ivCRlv79Q2R+
+    /czSAaF9ffgZGclCKxO/WIu6pKJmBHaIkU4MiRTOok3JMrO66BQavHHxW/BBC5gA
+    CiIDEOUMsfnNkjcZ7Tvx5Dq2+UUTJnWvu6rvP3t3O9LEApE9GQDTF1w52z97GA1F
+    zZOFli9d31kWTz9RvdVFGD/tSo7oBmF0Ixa1DVBzJ0RHfxBdiSprhTEUxOipakyA
+    vGp4z7h/jnZymQyd/teRCBaho1+V
+    -----END CERTIFICATE-----
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: export-ca-cm-dotnet-legacy-vm-export
+---
+apiVersion: kubevirt.io/v1
+kind: VirtualMachine
+metadata:
+  annotations:
+    kubemacpool.io/transaction-timestamp: "2026-06-05T14:29:04.819933318Z"
+    kubevirt.io/latest-observed-api-version: v1
+    kubevirt.io/storage-observed-api-version: v1
+    vm.kubevirt.io/validations: |
+      [
+        {
+          "name": "minimal-required-memory",
+          "path": "jsonpath::.spec.domain.memory.guest",
+          "rule": "integer",
+          "message": "This VM requires more memory.",
+          "min": 536870912
+        }, {
+          "name": "windows-virtio-bus",
+          "path": "jsonpath::.spec.domain.devices.disks[*].disk.bus",
+          "valid": "jsonpath::.spec.domain.devices.disks[*].disk.bus",
+          "rule": "enum",
+          "message": "virtio disk bus type has better performance, install virtio drivers in VM and change bus type",
+          "values": ["virtio"],
+          "justWarning": true
+        }, {
+          "name": "windows-disk-bus",
+          "path": "jsonpath::.spec.domain.devices.disks[*].disk.bus",
+          "valid": "jsonpath::.spec.domain.devices.disks[*].disk.bus",
+          "rule": "enum",
+          "message": "disk bus has to be either virtio or sata or scsi",
+          "values": ["virtio", "sata", "scsi"]
+        }, {
+          "name": "windows-cd-bus",
+          "path": "jsonpath::.spec.domain.devices.disks[*].cdrom.bus",
+          "valid": "jsonpath::.spec.domain.devices.disks[*].cdrom.bus",
+          "rule": "enum",
+          "message": "cd bus has to be sata",
+          "values": ["sata"]
+        }
+      ]
+  creationTimestamp: null
+  labels:
+    app: dotnet-legacy-win2k22
+    vm.kubevirt.io/template: windows2k22-server-medium
+    vm.kubevirt.io/template.namespace: openshift
+    vm.kubevirt.io/template.revision: "1"
+    vm.kubevirt.io/template.version: v0.34.1
+  name: dotnet-legacy-win2k22
+  namespace: dotnet-legacy
+spec:
+  dataVolumeTemplates:
+  - apiVersion: cdi.kubevirt.io/v1beta1
+    kind: DataVolume
+    metadata:
+      annotations:
+        cdi.kubevirt.io/storage.bind.immediate.requested: "true"
+      creationTimestamp: null
+      name: dotnet-legacy-win2k22
+    spec:
+      source:
+        http:
+          certConfigMap: export-ca-cm-dotnet-legacy-vm-export
+          secretExtraHeaders:
+          - header-secret-dotnet-legacy-vm-export
+          url: https://virt-exportproxy-openshift-cnv.apps.aromerot.redhat-openshift.com/api/export.kubevirt.io/v1beta1/namespaces/dotnet-legacy/virtualmachineexports/dotnet-legacy-vm-export
+      storage:
+        resources:
+          requests:
+            storage: 60Gi
+  - metadata:
+      creationTimestamp: null
+      name: dotnet-legacy-win2k22-installation-cdrom
+    spec:
+      source:
+        http:
+          certConfigMap: export-ca-cm-dotnet-legacy-vm-export
+          secretExtraHeaders:
+          - header-secret-dotnet-legacy-vm-export
+          url: https://virt-exportproxy-openshift-cnv.apps.aromerot.redhat-openshift.com/api/export.kubevirt.io/v1beta1/namespaces/dotnet-legacy/virtualmachineexports/dotnet-legacy-vm-export/volumes/dotnet-legacy-win2k22/disk.img.gz
+      storage:
+        resources:
+          requests:
+            storage: 60Gi
+  runStrategy: RerunOnFailure
+  template:
+    metadata:
+      annotations:
+        kubevirt.io/pci-topology-version: v3
+        vm.kubevirt.io/flavor: medium
+        vm.kubevirt.io/os: windows2k22
+        vm.kubevirt.io/workload: server
+      creationTimestamp: null
+      labels:
+        kubevirt.io/domain: dotnet-legacy-win2k22
+        kubevirt.io/size: medium
+        network.kubevirt.io/headlessService: headless
+    spec:
+      architecture: amd64
+      domain:
+        clock:
+          timer:
+            hpet:
+              present: false
+            hyperv: {}
+            pit:
+              tickPolicy: delay
+            rtc:
+              tickPolicy: catchup
+          utc: {}
+        cpu:
+          cores: 1
+          sockets: 4
+          threads: 1
+        devices:
+          disks:
+          - bootOrder: 2
+            disk:
+              bus: sata
+            name: rootdisk
+          - bootOrder: 3
+            cdrom:
+              bus: sata
+            name: windows-drivers-disk
+          - bootOrder: 1
+            cdrom:
+              bus: sata
+            name: installation-cdrom
+          inputs:
+          - bus: usb
+            name: tablet
+            type: tablet
+          interfaces:
+          - macAddress: 02:9d:2a:2f:47:46
+            masquerade: {}
+            model: e1000e
+            name: default
+          tpm:
+            persistent: true
+        features:
+          acpi: {}
+          apic: {}
+          hyperv:
+            frequencies: {}
+            ipi: {}
+            reenlightenment: {}
+            relaxed: {}
+            reset: {}
+            runtime: {}
+            spinlocks:
+              spinlocks: 8191
+            synic: {}
+            synictimer:
+              direct: {}
+            tlbflush: {}
+            vapic: {}
+            vpindex: {}
+          smm: {}
+        firmware:
+          bootloader:
+            efi:
+              persistent: true
+              secureBoot: true
+          serial: f784c8ce-6830-4c8e-b279-bdc3b21f726f
+          uuid: 71e3289e-dbfd-4452-becb-55b235c70db9
+        machine:
+          type: pc-q35-rhel9.6.0
+        memory:
+          guest: 16Gi
+        resources: {}
+      networks:
+      - name: default
+        pod: {}
+      subdomain: headless
+      terminationGracePeriodSeconds: 3600
+      volumes:
+      - dataVolume:
+          name: dotnet-legacy-win2k22
+        name: rootdisk
+      - containerDisk:
+          image: registry.redhat.io/container-native-virtualization/virtio-win-rhel9@sha256:d08d44f95b4c9649eb6a0bdfd5fe2b0ae4779829ed2593e4fed75e650eb18d70
+        name: windows-drivers-disk
+      - dataVolume:
+          name: dotnet-legacy-win2k22-installation-cdrom
+        name: installation-cdrom
+status: {}
+---

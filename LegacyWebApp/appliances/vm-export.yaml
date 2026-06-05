@@ -1,0 +1,11 @@
+apiVersion: export.kubevirt.io/v1beta1
+kind: VirtualMachineExport
+metadata:
+  name: dotnet-legacy-vm-export
+  namespace: dotnet-legacy
+spec:
+  source:
+    apiGroup: "kubevirt.io"
+    kind: VirtualMachine
+    name: dotnet-legacy-win2k22
+  ttlDuration: 2h
