@@ -5,7 +5,7 @@ To import your exported VM disk image (like a `.qcow2`, `.img`, or `.raw` file) 
 
 The easiest and most common way to do this is by using the `virtctl` CLI tool to upload the file directly into a new DataVolume/PersistentVolumeClaim (PVC), which you then attach to a VM.
 
-##Prerequisites:##
+## Prerequisites:
 
 - You must have the `virtctl` tool installed and configured with cluster access
 - The file must be accessible from your local machine
@@ -43,6 +43,7 @@ oc get dv dotnet-legacy-disk -n dotnet-legacy
 ```
 
 ## Step 3: Create the VM Using the Imported Disk
+
 Once the DataVolume is ready, you need to create a Virtual Machine configuration that references this disk. You can do this via the OpenShift Web Console or via a YAML manifest.
 
 ## Option A: Using the OpenShift Web Console (Easiest)
@@ -104,7 +105,7 @@ To export a Virtual Machine (VM) from OpenShift Virtualization, you will use the
 
 There are the two main ways to do it: the quick way using the virtctl CLI, and the declarative way using a YAML manifest, which is the preferred method used below:
 
-##Prerequisites:##
+## Prerequisites:
 
 - The VM must be shut down before you begin
 - You must have the OpenShift CLI (oc) tool installed
