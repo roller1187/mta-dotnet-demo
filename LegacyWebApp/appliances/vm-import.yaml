@@ -1,0 +1,42 @@
+apiVersion: kubevirt.io/v1
+kind: VirtualMachine
+metadata:
+  name: dotnet-legacy-win2k22
+  namespace: dotnet-legacy
+spec:
+  runStrategy: Halted
+  template:
+    metadata:
+      labels:
+        kubevirt.io/domain: dotnet-legacy-win2k22
+    spec:
+      domain:
+        cpu:
+          cores: 4
+        memory:
+          guest: 16Gi
+        firmware:
+          bootloader:
+            efi:
+              persistent: true
+              secureBoot: true
+        features:
+          acpi: {}
+          apic: {}
+          smm:
+            enabled: true
+        devices:
+          disks:
+            - disk:
+                bus: sata
+              name: rootdisk
+      volumes:
+        - name: rootdisk
+          persistentVolumeClaim:
+            claimName: dotnet-legacy-disk
+        - cloudInitNoCloud:
+            userData: |
+              #cloud-config
+              user: administrator
+              password: openshift123!
+          name: cloudinitdisk
