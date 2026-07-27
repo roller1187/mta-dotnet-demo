@@ -35,6 +35,7 @@ This is the **modernized version** of LegacyWebApp, migrated from ASP.NET Framew
 - `_ViewStart.cshtml` - Layout configuration
 - `Dockerfile` - Container image definition
 - `openshift-deployment.yaml` - Kubernetes/OpenShift deployment
+- `openshift-ossm-deployment.yaml` - Service Mesh weighted routing deployment (optional)
 - `build-and-deploy.sh` - Deployment script
 
 **Modified:**
@@ -143,6 +144,43 @@ envFrom:
   - configMapRef:
       name: modern-webapp-config
 ```
+
+## Service Mesh Weighted Routing (Optional)
+
+Use OpenShift Service Mesh 3.x to route traffic through a single URL, splitting requests between the Legacy and Modern applications using weighted routing. This enables canary-style deployments where most traffic goes to the Legacy app while a subset is directed to the Modern app for testing and performance monitoring.
+
+### Prerequisites
+- Red Hat OpenShift Service Mesh 3 operator installed on the cluster
+- LegacyWebApp deployed in the `dotnet-legacy` namespace
+- ModernWebApp deployed in the `dotnet-modern` namespace
+
+### Deploy Service Mesh and Weighted Routing
+
+```bash
+# Apply all Service Mesh resources (namespaces, Istio control plane, gateway, routing)
+oc apply -f openshift-ossm-deployment.yaml
+
+# Enable sidecar injection on the Modern app
+oc label namespace dotnet-modern istio-injection=enabled
+oc rollout restart deployment/dotnet-modern -n dotnet-modern
+```
+
+This deploys:
+- **Istio control plane** (IstioCNI + Istio) via the Sail operator
+- **Kubernetes Gateway API** resources (Gateway, HTTPRoute, ReferenceGrants)
+- **OpenShift Route** for external access with TLS edge termination
+
+The default traffic split is **90% Legacy / 10% Modern**.
+
+### Adjusting the Traffic Split
+
+Edit the HTTPRoute weights to change the distribution:
+
+```bash
+oc edit httproute dotnet-weighted-route -n istio-system
+```
+
+Change the `weight` values under `backendRefs` (e.g., `50`/`50` for an even split, or `0`/`100` to send all traffic to Modern).
 
 ## Key Improvements
 

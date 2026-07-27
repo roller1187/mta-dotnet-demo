@@ -99,6 +99,12 @@ LegacyWebApp/
 | Global.asax | Global.asax.cs | Program.cs + middleware |
 | packages.config | packages.config | PackageReference in .csproj |
 
+## Service Mesh Weighted Routing (Optional)
+
+This repository also includes an optional OpenShift Service Mesh 3.x deployment that enables weighted traffic splitting between the Legacy and Modern applications through a single URL. Using the Kubernetes Gateway API, requests are routed primarily to the Legacy app (90%) with a configurable subset directed to the Modern app (10%), enabling canary-style testing and performance monitoring during migration.
+
+See [`ModernWebApp/openshift-ossm-deployment.yaml`](ModernWebApp/openshift-ossm-deployment.yaml) and the [ModernWebApp README](ModernWebApp/README.md#service-mesh-weighted-routing-optional) for setup instructions.
+
 ## Next Steps
 
 After creating this demo app, you would:
