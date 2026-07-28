@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: legacy-web-app-svc
+  namespace: dotnet-legacy
+spec:
+  ports:
+    - name: http
+      port: 80         # The port the Service exposes inside the cluster
+      protocol: TCP
+      targetPort: 80   # The port your IIS site is listening on inside the VM
+  selector:
+    vm.kubevirt.io/name: dotnet-legacy-win2k22
+  type: ClusterIP
