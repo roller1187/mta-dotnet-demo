@@ -151,6 +151,7 @@ Use OpenShift Service Mesh 3.x to route traffic through a single URL, splitting 
 
 ### Prerequisites
 - Red Hat OpenShift Service Mesh 3 operator installed on the cluster
+- Kiali operator (`kiali-ossm`) installed on the cluster
 - LegacyWebApp deployed in the `dotnet-legacy` namespace
 - ModernWebApp deployed in the `dotnet-modern` namespace
 
@@ -169,6 +170,8 @@ This deploys:
 - **Istio control plane** (IstioCNI + Istio) via the Sail operator
 - **Kubernetes Gateway API** resources (Gateway, HTTPRoute, ReferenceGrants)
 - **OpenShift Route** for external access with TLS edge termination
+- **Kiali** for service mesh observability (traffic graph, metrics, health)
+- **OSSMConsole** plugin for integrated Kiali views in the OpenShift web console
 
 The default traffic split is **90% Legacy / 10% Modern**.
 
